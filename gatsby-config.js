@@ -3,5 +3,16 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "landingpage",
   },
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-less`,
+      options: {
+        javascriptEnabled: true,
+        modifyVars: {
+          "primary-color": "#00BFA6",
+        },
+      },
+    },
+  ],
 };
